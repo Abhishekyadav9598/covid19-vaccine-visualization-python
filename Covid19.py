@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
-
+ #read csv file by file location
 df=pd.read_csv("C:\\Users\\Dell\\OneDrive\\Desktop\\covid19vaccinesbyzipcode_test.csv")
 print(df)
 
