@@ -10,10 +10,9 @@ print(df)
 # Checking Null Values
 print(df.isnull().sum())
 
-
+# Fill missing values with the average of that column (if any)
 for col in df.columns:
     if pd.api.types.is_numeric_dtype(df[col]):
-        # Fill missing values with the average of that column (if any)
         mean_val = df[col].mean()
         df[col] = df[col].fillna(mean_val)
 df['local_health_jurisdiction'] = df['local_health_jurisdiction'].fillna("No Data")
